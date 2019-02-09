@@ -3,3 +3,10 @@ $primary-color: blue;
 p {
   color: $primary-color;
 }
+
+.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
