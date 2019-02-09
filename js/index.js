@@ -1,6 +1,6 @@
 const searchType = document.querySelector('.type');
 const searchParticipants = document.querySelector('.participants');
-const search = document.getElementsByTagName('a');
+
 
 
 searchType.addEventListener("click", function(event) {
