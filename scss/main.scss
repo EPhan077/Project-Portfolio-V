@@ -1,7 +1,32 @@
-$primary-color: blue;
+$primary-color: #2699FB;
+$secondary-color: #F18F01;
+$primary-font-family: 'Lato', sans-serif;
 
-p {
+body {
+  background-color: #757575;
+}
+
+
+p, h1, h3, a, button {
+  font-family: $primary-font-family;
+}
+
+h1 {
   color: $primary-color;
+  margin-top: 
+}
+
+a {
+  color: #FFF;
+}
+
+a:hover {
+  color: $secondary-color;
+}
+
+button {
+  background-color: $secondary-color;
+  color: #FFF;
 }
 
 .center {

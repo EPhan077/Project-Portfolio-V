@@ -1,5 +1,21 @@
-p {
-  color: blue; }
+body {
+  background-color: #757575; }
+
+p, h1, h3, a, button {
+  font-family: "Lato", sans-serif; }
+
+h1 {
+  color: #2699FB; }
+
+a {
+  color: #FFF; }
+
+a:hover {
+  color: #F18F01; }
+
+button {
+  background-color: #F18F01;
+  color: #FFF; }
 
 .center {
   position: absolute;
