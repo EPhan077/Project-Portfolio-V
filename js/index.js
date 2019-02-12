@@ -193,9 +193,9 @@ searchCost.addEventListener("click", function(event) {
 
         // Extension of the query string
         const searchTerm = document.querySelector('#searchTerm').value;
-        const criteria = `type`;
+        const criteria = `price`;
         // The complete build of the url
-        const url = `${base}?${searchCost}=${searchTerm}`;
+        const url = `${base}?${criteria}=${searchTerm}`;
 
 
 
@@ -277,10 +277,10 @@ searchAccessibility.addEventListener("click", function(event) {
 
         // Extension of the query string
         const searchTerm = document.querySelector('#searchTerm').value;
-        const criteria = `participants`;
+        const criteria = `accessibility`;
 
         // The complete build of the url
-        const url = `${base}?${searchAccessibility}=${searchTerm}`;
+        const url = `${base}?${criteria}=${searchTerm}`;
 
 
         // The get method
