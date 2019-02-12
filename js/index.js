@@ -8,6 +8,13 @@ const searchAccessibility = document.querySelector('.accessibility');
 searchType.addEventListener("click", function(event) {
     event.preventDefault();
 
+    document.querySelector('.js-search-form').reset();
+
+    // To set search type details
+    const searchDetails = '';
+    searchDetails += `<p class="text-center">Find a random activity with a specified type (educational, recreational, music, social, diy, cooking)</p>`;
+    document.querySelector('.details').innerHTML = searchDetails;
+
       // To set the event to listen to
       const form = document.querySelector('.js-search-form');
 
@@ -22,8 +29,8 @@ searchType.addEventListener("click", function(event) {
       // Extension of the query string
       const searchTerm = document.querySelector('#searchTerm').value;
       const criteria = `type`;
-      // The complete build of the url
 
+      // The complete build of the url
       const url = `${base}?${criteria}=${searchTerm}`;
 
 
@@ -51,7 +58,7 @@ searchType.addEventListener("click", function(event) {
               console.log(data);
 
         // Output results
-        let resultElement = '';
+        const resultElement = '';
 
             if(data.activity.length > 1) {
 
@@ -63,7 +70,7 @@ searchType.addEventListener("click", function(event) {
                 resultElement += `</section>`;
 
         // To store input via local storage
-        var pastSearch = document.getElementsByTagName('input') [0], search;
+        const pastSearch = document.getElementsByTagName('input') [0], search;
 
         localStorage.setItem('search', searchTerm);
 
@@ -92,6 +99,13 @@ searchType.addEventListener("click", function(event) {
 searchParticipants.addEventListener("click", function(event) {
     event.preventDefault();
 
+    document.querySelector('.js-search-form').reset();
+
+    // To set search type details
+    const searchDetails = '';
+    searchDetails += `<p class="text-center">Find a random activity with a specified number of participants</p>`;
+    document.querySelector('.details').innerHTML = searchDetails;
+
       // To set the event to listen to
       const form = document.querySelector('.js-search-form');
 
@@ -108,12 +122,7 @@ searchParticipants.addEventListener("click", function(event) {
       const criteria = `participants`;
 
       // The complete build of the url
-
-      //const url = `${base}?${searchType}=${searchTerm}`;
       const url = `${base}?${criteria}=${searchTerm}`;
-      //const url = `${base}?${searchCost}=${searchTerm}`;
-      //const url = `${base}?${searchAccessibility}=${searchTerm}`;
-
 
       // The get method
       const option = {
@@ -138,8 +147,8 @@ searchParticipants.addEventListener("click", function(event) {
 
               console.log(data);
 
-        // Output results
-        let resultElement = '';
+        // Output constresults
+        const resultElement = '';
 
             if(data.activity.length > 1) {
 
@@ -151,7 +160,7 @@ searchParticipants.addEventListener("click", function(event) {
                 resultElement += `</section>`;
 
         // To store input via local storage
-        var pastSearch = document.getElementsByTagName('input') [0], search;
+        const pastSearch = document.getElementsByTagName('input') [0], search;
 
         localStorage.setItem('search', searchTerm);
 
@@ -179,6 +188,13 @@ searchParticipants.addEventListener("click", function(event) {
 /* --- Cost Search Event -- */
 searchCost.addEventListener("click", function(event) {
       event.preventDefault();
+
+      document.querySelector('.js-search-form').reset();
+
+      // To set search type details
+      const searchDetails = '';
+      searchDetails += `<p class="text-center">Find a random activity with a specified price (range 0 - 0.99)</p>`;
+      document.querySelector('.details').innerHTML = searchDetails;
 
         // To set the event to listen to
         const form = document.querySelector('.js-search-form');
@@ -223,7 +239,7 @@ searchCost.addEventListener("click", function(event) {
                 console.log(data);
 
           // Output results
-          let resultElement = '';
+          const resultElement = '';
 
               if(data.activity.length > 1) {
 
@@ -235,7 +251,7 @@ searchCost.addEventListener("click", function(event) {
                   resultElement += `</section>`;
 
           // To store input via local storage
-          var pastSearch = document.getElementsByTagName('input') [0], search;
+          const pastSearch = document.getElementsByTagName('input') [0], search;
 
           localStorage.setItem('search', searchTerm);
 
@@ -263,6 +279,13 @@ searchCost.addEventListener("click", function(event) {
 /* --- Accessibility Search Event -- */
 searchAccessibility.addEventListener("click", function(event) {
       event.preventDefault();
+
+      document.querySelector('.js-search-form').reset();
+
+      // To set search type details
+      const searchDetails = '';
+      searchDeconsttails += `<p class="text-center">Find a random activity with a specified accessibility in an inclusively contained range (zero being the most accessible)</p>`;
+      document.querySelector('.details').innerHTML = searchDetails;
 
         // To set the event to listen to
         const form = document.querySelector('.js-search-form');
@@ -306,7 +329,7 @@ searchAccessibility.addEventListener("click", function(event) {
 
                 console.log(data);
           // Output results
-          let resultElement = '';
+          const resultElement = '';
 
               if(data.activity.length > 1) {
 
@@ -318,7 +341,7 @@ searchAccessibility.addEventListener("click", function(event) {
                   resultElement += `</section>`;
 
           // To store input via local storage
-          var pastSearch = document.getElementsByTagName('input') [0], search;
+          const pastSearch = document.getElementsByTagName('input') [0], search;
 
           localStorage.setItem('search', searchTerm);
 
