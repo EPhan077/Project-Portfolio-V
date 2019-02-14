@@ -114,7 +114,7 @@ searchType.addEventListener("click", function(event) {
           modal.style.display = 'block';
           let resultDetails = ``;
           resultDetails += `<div class="container text-center">
-                            <img src="../img/do.jpg" alt="Details Logo"/>
+                            <img src="img/do.jpg" alt="Details Logo"/>
                             <p class="details">Activity: ${data.activity}</p>
                             <p class="details">Accessibility: ${data.accessibility}</p>
                             <p class="details">Type: ${data.type}</p>
@@ -244,7 +244,7 @@ searchParticipants.addEventListener("click", function(event) {
           modal.style.display = 'block';
           let resultDetails = ``;
           resultDetails += `<div class="container text-center">
-                            <img src="../img/do.jpg" alt="Details Logo"/>
+                            <img src="img/do.jpg" alt="Details Logo"/>
                             <p class="details">Activity: ${data.activity}</p>
                             <p class="details">Accessibility: ${data.accessibility}</p>
                             <p class="details">Type: ${data.type}</p>
@@ -377,7 +377,7 @@ searchPrice.addEventListener("click", function(event) {
           modal.style.display = 'block';
           let resultDetails = ``;
           resultDetails += `<div class="container text-center">
-                            <img src="../img/do.jpg" alt="Details Logo"/>
+                            <img src="img/do.jpg" alt="Details Logo"/>
                             <p class="details">Activity: ${data.activity}</p>
                             <p class="details">Accessibility: ${data.accessibility}</p>
                             <p class="details">Type: ${data.type}</p>
@@ -509,7 +509,7 @@ searchAccessibility.addEventListener("click", function(event) {
           modal.style.display = 'block';
           let resultDetails = ``;
           resultDetails += `<div class="container text-center">
-                            <img src="../img/do.jpg" alt="Details Logo"/>
+                            <img src="img/do.jpg" alt="Details Logo"/>
                             <p class="details">Activity: ${data.activity}</p>
                             <p class="details">Accessibility: ${data.accessibility}</p>
                             <p class="details">Type: ${data.type}</p>
