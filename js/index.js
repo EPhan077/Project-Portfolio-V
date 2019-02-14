@@ -428,7 +428,7 @@ searchAccessibility.addEventListener("click", function(event) {
 
     // To set search type details
     let searchInfo = '';
-    searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified accessibility: 1 being not easily accessible and 0 being the most accessible</p>`;
+    searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified accessibility: 1 being not easily accessible and 0 being the most accessible (number: 0, 1, or between 0.1 - 0.9)</p>`;
     document.querySelector('.searchInfo').innerHTML = searchInfo;
 
     // To listen when user hits submit or press enter
@@ -538,7 +538,7 @@ searchAccessibility.addEventListener("click", function(event) {
         console.log(err)
 
         // Output results
-        let resultError = '<p class="text-center">Please type 0 or 1 only!</p>';
+        let resultError = '<p class="text-center">Please type numbers only: 0, 1, or between 0.1 - 0.9!</p>';
         document.querySelector('.js-search-results').innerHTML = resultError;
       })
     }
