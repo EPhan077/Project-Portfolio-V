@@ -18,6 +18,8 @@ const base = `https://www.boredapi.com/api/activity`;
 const modal = document.getElementById('myModal');
 const span = document.getElementsByClassName('close') [0];
 
+const enter = document.getElementById("enter");
+
 
 /*********** ----- TYPE SEARCH TYPE EVENT ----- **********/
 searchType.addEventListener("click", function(event) {
@@ -544,3 +546,14 @@ searchAccessibility.addEventListener("click", function(event) {
     }
   })
 })
+
+// To enter main page
+enter.addEventListener("click", toggle, false);
+
+function toggle()
+{
+    const isHidden = document.getElementById("hideMe");
+    isHidden.style.display = "none";
+    const isShow = document.getElementById("showMe");
+    isShow.style.display= "block";
+}
