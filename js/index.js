@@ -89,10 +89,9 @@ searchType.addEventListener("click", function(event) {
         if(data.activity.length > 1) {
 
           resultElement += `
-            <section class="results js-search-results container-fluid text-center">
-            <h2 class="text-center"><span>Results for ${searchTerm}</span></h2>
-            <a href="#" id="resultElement">${data.activity}</a>
-            </section>`;
+            <h3 class="text-center"><span>Results for ${searchTerm}</span></h3>
+            <p class="resultInfo">Click on activity to see more details</p>
+            <a href="#" id="resultElement" class="linkResult">${data.activity}</a>`;
 
           // To store input via local storage
           let pastSearch = document.getElementsByTagName('input') [0], search;

@@ -29,13 +29,13 @@ h2 {
   color: #2699FB;
   padding-top: 100px; }
 
-h1, h2 {
+h1, h2, h3 {
   color: #2699FB; }
 
 a {
   color: #FFF; }
 
-a:hover, .searchInfo {
+a:hover, .searchInfo, .resultInfo {
   color: #F18F01; }
 
 p {
@@ -43,14 +43,25 @@ p {
 
 button {
   background-color: #F18F01;
-  color: #FFF;
-  padding-left: 50px;
-  padding-right: 50px; }
+  color: #FFF; }
+
+footer {
+  background-color: #2699FB; }
+
+.searchInfo {
+  padding-top: 80px; }
+
+.footer {
+  color: #FFF; }
 
 .results {
   background-color: #EEE; }
 
 .details {
+  font-size: 24px; }
+
+.linkResult {
+  color: #F18F01;
   font-size: 24px; }
 
 /* The Modal (background) */
@@ -87,14 +98,14 @@ button {
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #AAA;
   text-align: right;
   font-size: 28px;
   font-weight: bold; }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #F18F01;
   text-decoration: none; }
 
 #hideMe {
