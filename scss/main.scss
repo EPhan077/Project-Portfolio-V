@@ -1,17 +1,47 @@
 $primary-color: #2699FB;
 $secondary-color: #F18F01;
+$neutral-color: #C9C8C8;
 $primary-font-family: 'Lato', sans-serif;
 
-body {
-  background-color: #757575;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+  background-color: #000;
+}
 
-p, h1, h3, a, button {
+header {
+  background-image: linear-gradient(rgba(0, 7, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/activitybckgrnd.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top center;
+  height: 650px;
+  background-attachment: fixed;
+}
+
+section {
+    padding: 80px 0;
+    height: 250px;
+    background-color: $neutral-color;
+}
+
+p, h1, h2, h3, a, button {
   font-family: $primary-font-family;
 }
 
 h1 {
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: $primary-color;
+  padding-top: 100px;
+}
+
+h1, h2 {
   color: $primary-color;
 }
 
@@ -81,6 +111,10 @@ button {
 
 #hideMe {
   height: 900px;
+  background-image: linear-gradient(rgba(0, 7, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/activitybckgrnd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
