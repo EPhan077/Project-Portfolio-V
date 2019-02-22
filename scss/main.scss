@@ -9,21 +9,17 @@ $primary-font-family: 'Lato', sans-serif;
     box-sizing: border-box;
 }
 
-body {
-  background-color: #000;
-}
-
 header {
   background-image: linear-gradient(rgba(0, 7, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/activitybckgrnd.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top center;
+  background-color: #000;
   height: 650px;
   background-attachment: fixed;
 }
 
 section {
-    padding: 80px 0;
     height: 250px;
     background-color: $neutral-color;
 }
@@ -32,13 +28,10 @@ p, h1, h2, h3, a, button {
   font-family: $primary-font-family;
 }
 
-h1 {
-  margin-bottom: 50px;
-}
 
 h2 {
   color: $primary-color;
-  padding-top: 100px;
+  //padding-top: 100px;
 }
 
 h1, h2, h3 {
@@ -66,9 +59,13 @@ footer {
   background-color: $primary-color;
 }
 
-.searchInfo {
-  padding-top: 80px;
+/*.searchInfo {
+  padding-top: 20px;
 }
+
+.searchTitle {
+  padding-top: 30px;
+}*/
 
 .footer {
   color: #FFF;
@@ -79,12 +76,12 @@ footer {
 }
 
 .details {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .linkResult {
   color: $secondary-color;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 /* The Modal (background) */
@@ -92,7 +89,7 @@ footer {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  //padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -107,7 +104,7 @@ footer {
   background-color: #fefefe;
   color: #2699FB;
   margin: auto;
-  padding: 20px;
+  //padding: 20px;
   border: 1px solid #888;
   width: 60%;
 }
