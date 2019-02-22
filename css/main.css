@@ -20,8 +20,7 @@ p, h1, h2, h3, a, button {
   font-family: "Lato", sans-serif; }
 
 h2 {
-  color: #2699FB;
-  padding-top: 100px; }
+  color: #2699FB; }
 
 h1, h2, h3 {
   color: #2699FB; }
@@ -70,8 +69,6 @@ footer {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
@@ -90,7 +87,6 @@ footer {
   background-color: #fefefe;
   color: #2699FB;
   margin: auto;
-  padding: 20px;
   border: 1px solid #888;
   width: 60%; }
 
