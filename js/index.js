@@ -33,10 +33,11 @@ searchType.addEventListener("click", function(event) {
 
   document.querySelector(".js-search-form").reset();
   document.querySelector(".errMsg").innerHTML = ``;
+  document.querySelector(".js-search-results").innerHTML = ``;
 
   // To set search type details
   let searchInfo = "";
-  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified type (educational, recreational, music, social, diy, cooking)</p>`;
+  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified type (recreational, music, social, diy, cooking)</p>`;
   document.querySelector(".searchInfo").innerHTML = searchInfo;
 });
 
@@ -52,10 +53,11 @@ searchParticipants.addEventListener("click", function(event) {
 
   document.querySelector(".js-search-form").reset();
   document.querySelector(".errMsg").innerHTML = ``;
+  document.querySelector(".js-search-results").innerHTML = ``;
 
   // To set search type details
   let searchInfo = "";
-  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified number of participants</p>`;
+  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified number of participants (range 1-8)</p>`;
   document.querySelector(".searchInfo").innerHTML = searchInfo;
 });
 
@@ -72,10 +74,11 @@ searchPrice.addEventListener("click", function(event) {
   // To clear previous search
   document.querySelector(".js-search-form").reset();
   document.querySelector(".errMsg").innerHTML = ``;
+  document.querySelector(".js-search-results").innerHTML = ``;
 
   // To set search type details
   let searchInfo = "";
-  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified price (range 0 - 0.6)</p>`;
+  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified price (range 0-0.6)</p>`;
   document.querySelector(".searchInfo").innerHTML = searchInfo;
 });
 
@@ -92,10 +95,11 @@ searchAccessibility.addEventListener("click", function(event) {
   // To clear previous search
   document.querySelector(".js-search-form").reset();
   document.querySelector(".errMsg").innerHTML = ``;
+  document.querySelector(".js-search-results").innerHTML = ``;
 
   // To set search type details
   let searchInfo = "";
-  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified accessibility: 1 being not easily accessible and 0 being the most accessible (number: 0, 1, or between 0.1 - 0.9)</p>`;
+  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified accessibility: 1 being not easily accessible and 0 being the most accessible (number: 0, 1, or between 0.1-0.9)</p>`;
   document.querySelector(".searchInfo").innerHTML = searchInfo;
 });
 
@@ -103,9 +107,30 @@ searchAccessibility.addEventListener("click", function(event) {
 
 // To listen when user hits submit or press enter
 form.addEventListener("submit", e => {
-  console.log(activityType);
+  // clear any errors when a form submit happens
+  document.querySelector(".errMsg").innerHTML = '';
   // Extension of the query string
   let searchTerm = document.querySelector("#searchTerm").value;
+
+  if ((activityType == 'type' && searchTerm.length == 0) || (activityType == 'type' && searchTerm.length > 0  && /^\d+$/.test(searchTerm))) {
+    document.querySelector(".errMsg").innerHTML = 'Input should be a valid text, try: recreational, music, social, diy, cooking';
+    return;
+  }
+
+  if ((activityType == 'participants' && searchTerm.length == 0) || (activityType == 'participants' && searchTerm.length > 0  && !(/^[-+]?[0-9]+\.[0-9]+$/.test(searchTerm))) && !(/^\d+$/.test(searchTerm))) {
+    document.querySelector(".errMsg").innerHTML = 'Input should be a valid number between 1-8';
+    return;
+  }
+
+  if ((activityType == 'price' && searchTerm.length == 0) || (activityType == 'price' && searchTerm.length > 0  && !(/^[-+]?[0-9]+\.[0-9]+$/.test(searchTerm))) && !(/^\d+$/.test(searchTerm))) {
+    document.querySelector(".errMsg").innerHTML = 'Input should be a valid number 0-0.6';
+    return;
+  }
+
+  if ((activityType == 'accessibility' && searchTerm.length == 0) || (activityType == 'accessibility' && searchTerm.length > 0  && !(/^[-+]?[0-9]+\.[0-9]+$/.test(searchTerm))) && !(/^\d+$/.test(searchTerm))) {
+    document.querySelector(".errMsg").innerHTML = 'Input should be a valid number of 0, 1, or between 0.1-0.9';
+    return;
+  }
 
   // The complete build of the url
   const url = `${base}?${activityType}=${searchTerm}`;
@@ -123,7 +148,7 @@ form.addEventListener("submit", e => {
   if (`${searchTerm}` === ``) {
     // Output results
     resultElement +=
-      '<p class="text-center">Please select a type search above first!</p>';
+      '<p class=" errMsg text-center">Please select a type search above first!</p>';
     document.querySelector(".errMsg").innerHTML = resultElement;
   } else {
     fetch(url)
@@ -168,7 +193,7 @@ form.addEventListener("submit", e => {
           modal.style.display = "block";
           let resultDetails = ``;
           resultDetails += `<div class="container text-center">
-                        <img src="img/do.jpg" alt="Details Logo"/>
+                        <img src="img/do.jpg" class="detailImg" alt="Details Logo"/>
                         <p class="details">Activity: ${data.activity}</p>
                         <p class="details">Accessibility: ${
                           data.accessibility
@@ -199,8 +224,10 @@ form.addEventListener("submit", e => {
       .catch(err => {
         console.log(err);
         // Output results
-        //if(isNaN(resultElement))
-        let resultError = '<p class="text-center">Please type text only!</p>';
+        let resultError = '';
+
+        resultError = '<p class="text-center">Sorry no results! Try again!</p>';
+
         document.querySelector(".errMsg").innerHTML = resultError;
       });
   }

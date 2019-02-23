@@ -1,3 +1,6 @@
+/* -------------------------------------------- */
+/* BASIC SETUP */
+/* -------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -7,20 +10,22 @@ header {
   background-image: linear-gradient(rgba(0, 7, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/activitybckgrnd.jpg");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: top center;
+  background-position: top left;
   background-color: #000;
-  height: 650px;
+  height: 575px;
   background-attachment: fixed; }
 
 section {
   height: 250px;
-  background-color: #C9C8C8; }
+  background-color: #C9C8C8;
+  padding-top: 50px; }
 
 p, h1, h2, h3, a, button {
   font-family: "Lato", sans-serif; }
 
 h2 {
-  color: #2699FB; }
+  color: #2699FB;
+  padding-top: 100px; }
 
 h1, h2, h3 {
   color: #2699FB; }
@@ -34,74 +39,25 @@ a:hover, .searchInfo, .resultInfo {
 p {
   color: #2699fb; }
 
+input {
+  height: 35px; }
+
 button {
   background-color: #F18F01;
-  color: #FFF; }
+  color: #FFF;
+  transition: background-color 0.2s, border 0.2s, color 0.2s; }
+
+button:hover {
+  background-color: #fff;
+  color: #F18F01; }
 
 footer {
-  background-color: #2699FB; }
+  background-color: #2699FB;
+  height: 70px; }
 
-/*.searchInfo {
-  padding-top: 20px;
-}
-
-.searchTitle {
-  padding-top: 30px;
-}*/
-.footer {
-  color: #FFF; }
-
-.results {
-  background-color: #EEE; }
-
-.details {
-  font-size: 1.5rem; }
-
-.linkResult {
-  color: #F18F01;
-  font-size: 1.5rem; }
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity*/ }
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  color: #2699FB;
-  margin: auto;
-  border: 1px solid #888;
-  width: 60%; }
-
-/* The Close Button */
-.close {
-  color: #AAA;
-  text-align: right;
-  font-size: 28px;
-  font-weight: bold; }
-
-.close:hover,
-.close:focus {
-  color: #F18F01;
-  text-decoration: none; }
-
+/* -------------------------------------------- */
+/* ENTER PAGE */
+/* -------------------------------------------- */
 #hideMe {
   height: 900px;
   background-image: linear-gradient(rgba(0, 7, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/activitybckgrnd.jpg");
@@ -124,3 +80,80 @@ footer {
 
 #showMe {
   display: none; }
+
+#enter {
+  margin-top: 20px; }
+
+/* -------------------------------------------- */
+/*  CUSTOM STYLES */
+/* -------------------------------------------- */
+.searchInfo {
+  padding-top: 20px; }
+
+.searchTitle {
+  padding-top: 30px; }
+
+.footer {
+  color: #FFF;
+  padding-top: 20px; }
+
+.results {
+  background-color: #EEE; }
+
+.details {
+  font-size: 1.5rem; }
+
+.linkResult {
+  color: #F18F01;
+  font-size: 1.5rem; }
+
+.errMsg {
+  color: #FF0000; }
+
+/* -------------------------------------------- */
+/* MODAL - RESULT DETAILS */
+/* -------------------------------------------- */
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity*/ }
+
+/* Modal Content */
+.modal-content {
+  background-color: #C9C8C8;
+  color: #2699FB;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; }
+
+.detailImg {
+  margin-bottom: 20px; }
+
+/* The Close Button */
+.close {
+  color: #F18F01;
+  text-align: right;
+  font-size: 28px;
+  font-weight: bold; }
+  .close .close:hover,
+  .close .close:focus {
+    text-decoration: none; }
