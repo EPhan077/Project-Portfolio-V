@@ -7,13 +7,8 @@
   box-sizing: border-box; }
 
 header {
-  background-image: linear-gradient(rgba(0, 7, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/activitybckgrnd.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: top left;
   background-color: #000;
-  height: 575px;
-  background-attachment: fixed; }
+  height: 575px; }
 
 section {
   height: 250px;
@@ -37,7 +32,7 @@ a:hover, .searchInfo, .resultInfo {
   color: #F18F01; }
 
 p {
-  color: #2699fb; }
+  color: #2699FB; }
 
 input {
   height: 35px; }
@@ -87,19 +82,20 @@ footer {
 /* -------------------------------------------- */
 /*  CUSTOM STYLES */
 /* -------------------------------------------- */
+/* Search type details */
 .searchInfo {
   padding-top: 20px; }
 
+/* Search box text */
 .searchTitle {
   padding-top: 30px; }
 
+/* Copyright text */
 .footer {
   color: #FFF;
   padding-top: 20px; }
 
-.results {
-  background-color: #EEE; }
-
+/* Search type details */
 .details {
   font-size: 1.5rem; }
 
@@ -107,6 +103,7 @@ footer {
   color: #F18F01;
   font-size: 1.5rem; }
 
+/* Error */
 .errMsg {
   color: #FF0000; }
 
@@ -145,15 +142,30 @@ footer {
   border: 1px solid #888;
   width: 60%; }
 
+/* Image in the modal content */
 .detailImg {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  width: 50%;
+  height: 50%; }
 
 /* The Close Button */
 .close {
   color: #F18F01;
   text-align: right;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold; }
   .close .close:hover,
   .close .close:focus {
     text-decoration: none; }
+
+@media screen and (min-width: 560px) {
+  header {
+    background-image: linear-gradient(rgba(0, 7, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/activitybckgrnd.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top center;
+    height: 575px;
+    background-attachment: fixed; }
+  .detailImg {
+    width: 100%;
+    height: 100%; } }
