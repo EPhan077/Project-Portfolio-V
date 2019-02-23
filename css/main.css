@@ -108,6 +108,11 @@ footer {
 .errMsg {
   color: #FF0000; }
 
+.vertical-center {
+  display: flex;
+  align-items: center;
+  height: 100vh; }
+
 /* -------------------------------------------- */
 /* MODAL - RESULT DETAILS */
 /* -------------------------------------------- */
