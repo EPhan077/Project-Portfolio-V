@@ -57,7 +57,7 @@ searchParticipants.addEventListener("click", function(event) {
 
   // To set search type details
   let searchInfo = "";
-  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified number of participants (range 1-8)</p>`;
+  searchInfo += `<p class="searchInfo text-center">Find a random activity with a specified number of participants (range 1-5, and 8)</p>`;
   document.querySelector(".searchInfo").innerHTML = searchInfo;
 });
 
@@ -118,7 +118,7 @@ form.addEventListener("submit", e => {
   }
 
   if ((activityType == 'participants' && searchTerm.length == 0) || (activityType == 'participants' && searchTerm.length > 0  && !(/^[-+]?[0-9]+\.[0-9]+$/.test(searchTerm))) && !(/^\d+$/.test(searchTerm))) {
-    document.querySelector(".errMsg").innerHTML = 'Input should be a valid number between 1-8';
+    document.querySelector(".errMsg").innerHTML = 'Input should be a valid number between 1-5 and 8';
     return;
   }
 
@@ -226,7 +226,7 @@ form.addEventListener("submit", e => {
         // Output results
         let resultError = '';
 
-        resultError = '<p class="text-center">Sorry no results! Try again!</p>';
+        resultError = '<p class="text-center errMsg">Sorry no results! Try again!</p>';
 
         document.querySelector(".errMsg").innerHTML = resultError;
       });

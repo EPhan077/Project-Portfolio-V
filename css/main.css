@@ -8,7 +8,7 @@
 
 header {
   background-color: #000;
-  height: 575px; }
+  height: 600px; }
 
 section {
   height: 250px;
@@ -107,11 +107,6 @@ footer {
 /* Error */
 .errMsg {
   color: #FF0000; }
-
-.vertical-center {
-  display: flex;
-  align-items: center;
-  height: 100vh; }
 
 /* -------------------------------------------- */
 /* MODAL - RESULT DETAILS */
