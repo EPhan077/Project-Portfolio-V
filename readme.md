@@ -6,11 +6,11 @@ We needed to create an interactive web application which incorporates one or mor
 
 # Website
 
-I chose to create a website called Activities To Do. The sole-purpose of the application is to provide you with activities to do based on specific search types (activity type, number of participants, etc.).
+I chose to create a web app called Activities To Do. The sole-purpose of the application is to provide you with activities to do based on specific search types (activity type, number of participants, etc.).
 
 ## Bootstrap
 
-The bootstrap framework was utilized with a mix of customed CSS. SASS and Gulp was also used for the help of deployment.
+The bootstrap framework was utilized with a mix of custom CSS. SASS and Gulp was also used for the help of deployment.
 
 
 ## Upcoming Focus
